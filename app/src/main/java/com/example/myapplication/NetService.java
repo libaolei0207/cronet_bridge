@@ -19,17 +19,8 @@ import retrofit2.http.Url;
 
 public interface NetService {
 
-    @POST("shop/api/v1/home")
-    @FormUrlEncoded
-    Observable<String> requestHome(@FieldMap Map<String,String> params);
+    @GET("getJoke/")
+    Observable<String> requestJoke(@Query("page") String page, @Query("count") String count, @Query("type") String type);
 
-
-    @GET("shop/api/v1/home")
-    Observable<String> requestHome(@Query("aaa")String aa);
-
-
-    @POST("user/login")
-    @FormUrlEncoded
-    Observable<String> requestLogin(@FieldMap Map<String,String> params);
 
 }

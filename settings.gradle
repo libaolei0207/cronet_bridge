@@ -1,0 +1,2 @@
+include ':app',":cronet-stable"
+rootProject.name='cronet-bridge'
