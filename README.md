@@ -12,7 +12,7 @@ val retrofitOkHttpClient =
                      .addConverterFactory(ScalarsConverterFactory.create())
                      .build()
 ```
-* 2. If you use okhttp directly, you can also do it based on interceptor, but there are two ways, synchronous and asynchronous. like this:
+* 2. If you use OkHttp directly, you can also do it based on interceptor, but there are two ways, synchronous and asynchronous. like this:
 ```java
 class CronetClientProvider private constructor() {
 companion object {
