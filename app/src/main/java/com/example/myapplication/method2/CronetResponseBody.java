@@ -8,15 +8,12 @@ import okhttp3.ResponseBody;
 import okio.BufferedSource;
 import okio.Okio;
 import okio.Source;
+import retrofit2.internal.EverythingIsNonNull;
 
 /**
- * @ProjectName: My Application
- * @Package: zy.demo.myapplication.record
- * @ClassName: CronetResponseBody
- * @Description: java类作用描述
- * @Author: zhangyi
- * @CreateDate: 2021/5/13 10:20
+ * * Created by baolei.li on 2021/6/7 4:27 下午.
  */
+
 public class CronetResponseBody extends ResponseBody {
     private MediaType mMediaType;
     private long mContentLength;
@@ -42,10 +39,8 @@ public class CronetResponseBody extends ResponseBody {
     @Override
     public BufferedSource source() {
         Source source = Okio.source(mInputStream);
-        BufferedSource bufferedSource = Okio.buffer(source);
-        return bufferedSource;
+        return Okio.buffer(source);
     }
-
     @Override
     public void close() {
         super.close();
